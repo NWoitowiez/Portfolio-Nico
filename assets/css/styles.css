@@ -308,6 +308,9 @@ img {
 }
 
 /* ===== WORK =====*/
+.work{
+  text-align: center;
+}
 .work__container {
   row-gap: 2rem;
 }
