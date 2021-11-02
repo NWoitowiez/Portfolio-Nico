@@ -8,7 +8,7 @@
     <!--================== CSS ================== -->
     <link href="assets/css/styles.css" rel="stylesheet">
     <link rel="icon" type="image/jpg" href="assets/img/logo.png">
-    <title >Portfolio responsive - Nicolás Woitowiez</title>
+    <title >Portfolio Responsive - Nicolás Woitowiez</title>
 </head>
 
 <body>
@@ -30,7 +30,21 @@
                     <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
                 </ul>
             </div>
+            <!--======== Switch de Dark-Mode=======-->
+            <div id="toggle">
+                <i class="indicator"></i>
+            </div>
 
+            <script>
+                const body = document.querySelector('body');
+                const toggle = document.getElementById('toggle');
+                toggle.onclick = function(){
+                    toggle.classList.toggle('active');
+                    body.classList.toggle('active');
+                }
+            </script>
+
+            <!--======== Logo de la navbar=======-->
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
             </div>
@@ -65,7 +79,7 @@
 
             <div>
                 <h2 class="about__subtitle">Yo soy Nicolás Woitowiez</h2>
-                <p>Nacido en el barrio de Boedo. Siempre fuí fanático de la tecnología, el arte y de aprender cada día algo nuevo.
+                <p class="about__text">Nacido en el barrio de Boedo. Siempre fuí fanático de la tecnología, el arte y de aprender cada día algo nuevo.
                 Gran capacidad de trabajo y aprendizaje continuo. Me encanta trabajar en equipo y poder compartir mi conocimiento 
                 hacia el que lo necesite, busco siempre encontrar soluciones a cualquier tipo de problema y lograr aportar ideas 
                 que propongan cambios significativos. Cuento con conocimientos que fuí adquiriendo de manera autodidacta,

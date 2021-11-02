@@ -59,26 +59,38 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  transition: 0.5s;
 }
+
+body.active {
+  background: rgb(31, 30, 30);
+  color: rgb(213, 184, 255);
+}
+
 h1,
 h2,
 p {
   margin: 0;
 }
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 /*==== CLASS CSS ====*/
+
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -87,6 +99,7 @@ img {
   margin-bottom: var(--mb-4);
   text-align: center;
 }
+
 .section-title::after {
   position: absolute;
   content: "";
@@ -98,12 +111,14 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
+
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
 /*==== LAYOUT ====*/
+
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -113,6 +128,7 @@ img {
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
+
 .l-header {
   width: 100%;
   position: fixed;
@@ -124,6 +140,7 @@ img {
 }
 
 /*==== NAV ====*/
+
 .nav {
   height: var(--header-height);
   display: flex;
@@ -131,6 +148,8 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
+
+
 @media screen and (max-width: 786px) {
   .nav__menu {
     position: fixed;
@@ -143,16 +162,20 @@ img {
     transition: 0.5s;
   }
 }
+
 .nav__item {
   margin-bottom: var(--mb-4);
 }
+
 .nav__link {
   position: relative;
   color: #fff;
 }
+
 .nav__link:hover {
   position: relative;
 }
+
 .nav__link:hover::after {
   position: absolute;
   content: "";
@@ -220,6 +243,53 @@ img {
   right: 0;
   bottom: 0;
   width: 295px;
+}
+
+/*SWITCH DARK MODE*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#toggle {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+  border-radius: 80px;
+  background: rgb(60, 60, 60);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#toggle.active {
+  background: rgb(196, 196, 196);
+  box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
+              inset 0 2px 8px rgba(0,0,0,0.1),
+              inset 0 -4px 8px rgba(0,0,0,0.05),
+}
+
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(to bottom, #be8eef,#cba8ef);
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
+              inset 0 2px 8px rgba(0,0,0,0.1),
+              inset 0 -4px 8px rgba(0,0,0,0.05);
+  transition: 0.5s;
+}
+
+#toggle.active .indicator {
+  left: 25px;
+  background: linear-gradient(to bottom, #5721c2,#3d0e9b);
+  box-shadow: inset 0 2px 60px rgba(232, 215, 255, 0.1),
+              inset 0 2px 8px rgb(100, 37, 177), 
+              inset 0 -4px 8px rgb(25, 2, 53);
 }
 
 /*BUTTONS*/
