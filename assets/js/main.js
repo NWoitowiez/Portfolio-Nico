@@ -55,7 +55,6 @@ sr.reveal('.skills__img',{delay: 400})
 sr.reveal('.work__img',{interval: 200})
 
 /*===== SCROLL CONTACTO =====*/
-sr.reveal('.contact__input',{interval: 200})
 
 //*==== DARK MODE ======*//
 const btnSwitch = document.querySelector('switch');
